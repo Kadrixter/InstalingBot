@@ -1,0 +1,5 @@
+[
+    {"login": "3twz15731", "password": "dgnia"},
+    {"login": "akam34585", "password": "tnzxy"}
+  ]
+  
