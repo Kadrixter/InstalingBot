@@ -13,7 +13,7 @@ firefox_binary_path = 'C:\\Program Files\\Firefox Nightly\\firefox.exe'
 profile_path = "C:\\Users\\Kamil\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\yx5ia98f.installing"
 
 options = Options()
-#options.add_argument("--headless")  # Ustawienie trybu headless
+options.add_argument("--headless")  # Ustawienie trybu headless
 options.binary_location = firefox_binary_path
 options.profile = profile_path  # Opcja z użyciem profilu
 options.set_preference("media.volume_scale", "0.0")  # Wyciszenie dźwięku
@@ -124,7 +124,7 @@ def UsersLoop(login):
                 wordsData.append(newJSON)
                 # Zmiana kodowania na odpowiednią postać
                 clean_word = polishWord.replace("\\u0142", "ł").replace("\\u0105", "ą")  # Dodaj inne znaki, jeśli potrzebne
-                send_discord_message(f"Zapisano nowe słówko: {{'word': '**{clean_word}**', 'translation': '**{englishWord}**'}} 👌")  # Wysłanie wiadomości o nowym słówku z emoji
+                send_discord_message(f"Nowe słówko: {{'word': '**{clean_word}**', 'translation': '**{englishWord}**'}} 👌")  # Wysłanie wiadomości o nowym słówku z emoji
             else:
                 for x in wordsData:
                     if polishWord == x['word'] and polishSentence == x['sentence']:
@@ -134,7 +134,7 @@ def UsersLoop(login):
             with open('word.json', "w") as wordsFile:
                 json.dump(wordsData, wordsFile)
 
-            time.sleep(0.5)
+            time.sleep(4.3)
         except Exception as e:
             print(f"Błąd w pętli użytkowników: {e}")
 
