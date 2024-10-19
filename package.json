@@ -2,9 +2,9 @@
   "name": "installing-oblivion",
   "version": "1.0.0",
   "description": "Bot for installing.pl",
-  "main": "index.py",
+  "main": "oblivion.py",
   "scripts": {
-    "test": "python index.py"
+    "test": "python oblivion.py"
   },
   "author": "Kadrixter",
   "license": "ISC"
